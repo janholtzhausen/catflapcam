@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CatflapCam Capture</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header>
+        <h1>CatflapCam Capture</h1>
+        <p>
+          Capture a still image from the MIPI CSI camera and upload it to a configurable
+          endpoint.
+        </p>
+      </header>
+
+      <section class="controls">
+        <label class="field">
+          Upload endpoint
+          <input
+            id="endpoint"
+            type="url"
+            placeholder="https://example.com/upload"
+            value="https://example.com/upload"
+          />
+        </label>
+        <button id="capture" class="primary">Capture</button>
+        <p id="status" class="status" aria-live="polite"></p>
+      </section>
+
+      <section class="preview">
+        <h2>Latest capture</h2>
+        <div class="image-frame">
+          <img id="preview" alt="Captured frame will appear here" />
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
